@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from '../axios';
-
+import domain from '../domain';
 class BookGymRoom extends Component {
     state = {
 
@@ -10,7 +10,7 @@ class BookGymRoom extends Component {
 
     componentDidMount() {
         axios
-            .get(`/api/gym/${this.props.match.params.gymId}`)
+            .get(domain.domain+`/api/gym/${this.props.match.params.gymId}`)
             .then(data => {
                 console.log(data);
                 this.setState({

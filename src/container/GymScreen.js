@@ -4,6 +4,7 @@ import { Button } from 'reactstrap'
 import { Link } from 'react-router-dom';
 import GoogleModal from './GoogleModal';
 import axios from '../axios';
+import domain from '../domain';
 
 class GymScreen extends Component {
 
@@ -14,7 +15,7 @@ class GymScreen extends Component {
 
     componentDidMount() {
         axios
-            .get("/api/gym")
+            .get(domain+domain+"/api/gym")
             .then(data => {
                 this.setState({ infos: data.data.places })
             })

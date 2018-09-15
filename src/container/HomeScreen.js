@@ -10,6 +10,7 @@ import  ProfilePage from './ProfilePage';
 import ThongTinPhong from './ThongTinPhong';
 import BookGymRoom from './BookGymRoom';
 
+import domain from '../domain';
 class HomeScreen extends Component {
 
     state={
@@ -25,7 +26,7 @@ class HomeScreen extends Component {
 
     componentDidMount(){
         axios
-            .get("/api/diadiem")
+            .get(domain.domain+"/api/diadiem")
             .then(data => {        
                 this.setState({places : data.data.places})
             })

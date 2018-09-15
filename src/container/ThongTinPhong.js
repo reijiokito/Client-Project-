@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from '../axios';
 import { Link } from 'react-router-dom';
-
+import domain from '../domain';
 class ThongTinPhong extends Component {
     state = {
         gym: {},
@@ -10,7 +10,7 @@ class ThongTinPhong extends Component {
 
     componentDidMount() {
         axios
-            .get(`/api/gym/${this.props.match.params.gymId}`)
+            .get(domain.domain+`/api/gym/${this.props.match.params.gymId}`)
             .then(data => {
                 this.setState({ gym: data.data.place[0] })
             })

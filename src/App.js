@@ -8,7 +8,7 @@ import HomeScreen from './container/HomeScreen';
 // import video from './videos/TITAN T1-X (Currently TYTAX® T1-X) - ULTIMATE Gym Machine UNLIMITED Workout Possibilities.mp4';
 import { BrowserRouter } from 'react-router-dom';
 import backgroundPT from './imgs/backgroundPT.jpg';
-
+import domain from './domain';
 class App extends Component {
   state = {
     user: null,
@@ -23,7 +23,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get("/api/auth/isLogin")
+      .get(domain.domain+"/api/auth/isLogin")
       .then(data => {
         if (data.success === 0)
           this.setState({ isLogin: false });
@@ -35,7 +35,7 @@ class App extends Component {
 
   _onLogin = (username, password) => {
     axios
-      .post("/api/auth/login", {
+      .post(domain+"/api/auth/login", {
         username: username,
         password: password
       })
@@ -53,7 +53,7 @@ class App extends Component {
 
   _onSignUp = (username, password, email, sdt, name) => {
     axios
-      .post("/api/user", {
+      .post(domain.domain+"/api/user", {
         username: username,
         password: password,
         email: email,
@@ -71,7 +71,7 @@ class App extends Component {
 
   _onLogout = () => {
     axios
-      .get("/api/auth/logout")
+      .get(domain.domain+"/api/auth/logout")
       .then(response => {
         this.setState({
           user: null,
@@ -84,7 +84,7 @@ class App extends Component {
   _onRegister = (gym, PT) => {
     
       axios
-        .put("/api/user/" + this.state.user._id, {
+        .put(domain.domain+"/api/user/" + this.state.user._id, {
           gymJoin: gym,
           chosenPT: PT
         })

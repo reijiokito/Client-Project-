@@ -5,6 +5,7 @@ import logo from '../logo/logo.jpg';
 import Login from './Login';
 import Logout from './Logout';
 import SignUp from './SignUp';
+import domain from '../domain';
 
 import {
     Collapse,
@@ -71,7 +72,7 @@ class NavBar extends Component {
         return (
             <div className="container-fluid">
                 <Navbar color="dark" dark expand="md" >
-                    <NavbarBrand href="http://localhost:3000/"><img src={logo} alt="" /></NavbarBrand>
+                    <NavbarBrand href={domain.domain}><img src={logo} alt="" /></NavbarBrand>
                     <Input  onChange={this.handleTextChange} type="text"placeholder="  Let's press address here" />
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
