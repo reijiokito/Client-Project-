@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from './axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 import './App.css';
 import HomeScreen from './container/HomeScreen';
 // import video from './videos/TITAN T1-X (Currently TYTAX® T1-X) - ULTIMATE Gym Machine UNLIMITED Workout Possibilities.mp4';

@@ -1,4 +1,4 @@
-import Axios from '../../../node_modules/axios';
+import Axios from 'axios';
 import config from './config';
 
 export default Axios.create({
