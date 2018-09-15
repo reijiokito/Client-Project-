@@ -72,7 +72,7 @@ class NavBar extends Component {
         return (
             <div className="container-fluid">
                 <Navbar color="dark" dark expand="md" >
-                    <NavbarBrand href={domain.domain}><img src={logo} alt="" /></NavbarBrand>
+                    <NavbarBrand href="https://gymmover.herokuapp.com"><img src={logo} alt="" /></NavbarBrand>
                     <Input  onChange={this.handleTextChange} type="text"placeholder="  Let's press address here" />
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
