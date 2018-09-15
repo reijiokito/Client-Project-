@@ -35,7 +35,7 @@ class App extends Component {
 
   _onLogin = (username, password) => {
     axios
-      .post(domain+"/api/auth/login", {
+      .post(domain.domain+"/api/auth/login", {
         username: username,
         password: password
       })
