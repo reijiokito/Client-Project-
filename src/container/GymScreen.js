@@ -17,7 +17,6 @@ class GymScreen extends Component {
         axios
             .get(domain.domain+"/api/gym")
             .then(data => {
-                console.log(data);
                 this.setState({ infos: data.data.places })
             })
             .catch(err => console.log(err));

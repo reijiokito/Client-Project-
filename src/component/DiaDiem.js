@@ -10,7 +10,7 @@ class DiaDiem extends Component {
 
     render() {
         const allPlaces = this.props.places.map(place => (
-            <div className="col-3 mt-3 mb-3" key={place._id} >                
+            <div className="col-4 mt-3 mb-3" key={place._id} >                
                 <Link to={`/diadiem/${place._id}`} >
                 <img src = {place.imgUrl} className="img-thumbnail"  />
                 <div>

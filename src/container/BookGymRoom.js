@@ -11,8 +11,7 @@ class BookGymRoom extends Component {
     componentDidMount() {
         axios
             .get(domain.domain+`/api/gym/${this.props.match.params.gymId}`)
-            .then(data => {
-                console.log(data);
+            .then(data => {                
                 this.setState({
                     PTs: data.data.place[0].PT,
                     gym: data.data.place[0]

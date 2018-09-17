@@ -22,6 +22,13 @@ class App extends Component {
       isLogin: !prevState.isLogin
     }));
   }
+  // componentWillReceiveProps(nextProps,nextState) {
+    
+  //   if (nextState.user !== this.state.user) {
+  //     this.loadData(nextState.user);
+  //   }
+  // }
+
 
   componentDidMount() {
     axios
@@ -47,6 +54,17 @@ class App extends Component {
           user: response.data.user
 
         });
+        // if (response.data.user.gymJoin.active === true) {
+        //   axios
+        //     .get(domain.domain+"/api/gym/" + response.data.user.gymJoin.gymID)
+        //     .then(response => {
+        //       this.setState({
+        //         gymJoin: response.data.place[0]
+        //       });
+        //     })
+        //     .catch(error => console.log(error));
+        // }
+
       })
       .catch(err => {
         console.log(err);

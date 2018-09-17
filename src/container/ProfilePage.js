@@ -1,20 +1,36 @@
 import React, { Component } from 'react';
-
+import axios from '../axios';
 import background from '../imgs/background.jpg';
 
+import domain from '../domain';
 class ProfilePage extends Component {
-    render() {
-        const user = this.props.user;
+
+    state={
+        user : {}
+    }
+    componentDidMount(){
+        
+            axios
+                .get(domain.domain + `/api/user/${this.props.match.params.userId}`)
+                .then(data => {                    
+                    this.setState({user : data.data.userFound});
+                })
+                .catch(err => console.log(err));
+        
+    }
+    
+    render() {        
+        const user = this.state.user;
         return (
             <div>
-                <div className="col-4">
-                    <img sr={user.imgUrl} alt="profileImg" />
+                <div className="col-4 text-light">
+                    <img sr={background} alt="profileImg" />
 
                 </div>
                 <div className="col-8">
-                    <p>Username : {user.username}</p>
+                    <p>Username : {user.name}</p>
                     <p>Email : {user.email}</p>
-                    <p>Phone : {user.phone}</p>}
+                    <p>Phone : {user.sdt}</p>                    
                 </div>
 
             </div>
