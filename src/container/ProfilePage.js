@@ -31,6 +31,8 @@ class ProfilePage extends Component {
                     <p>Username : {user.name}</p>
                     <p>Email : {user.email}</p>
                     <p>Phone : {user.sdt}</p>                    
+                    <p>PT : {user.chosenPT.name}</p> 
+                    <p>GymJoin : {user.gymJoin.name}</p> 
                 </div>
 
             </div>
