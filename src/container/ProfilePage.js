@@ -12,7 +12,9 @@ class ProfilePage extends Component {
         
             axios
                 .get(domain.domain + `/api/user/${this.props.match.params.userId}`)
-                .then(data => {                    
+                .then(data => {             
+                    console.log("Hello")    ;
+                    console.log(data.data.userFound)   ;
                     this.setState({user : data.data.userFound});
                 })
                 .catch(err => console.log(err));
@@ -30,9 +32,7 @@ class ProfilePage extends Component {
                 <div className="col-8">
                     <p>Username : {user.name}</p>
                     <p>Email : {user.email}</p>
-                    <p>Phone : {user.sdt}</p>                    
-                    <p>PT : {user.chosenPT.name}</p> 
-                    <p>GymJoin : {user.gymJoin.name}</p> 
+                    
                 </div>
 
             </div>
