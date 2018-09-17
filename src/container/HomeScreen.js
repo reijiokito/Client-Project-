@@ -27,7 +27,7 @@ class HomeScreen extends Component {
     componentDidMount(){
         axios
             .get(domain.domain+"/api/diadiem")
-            .then(data => {        
+            .then(data => {                        
                 this.setState({places : data.data.places})
             })
             .catch(err => console.log(err));        
@@ -53,7 +53,7 @@ class HomeScreen extends Component {
         });
         return (
             <div>
-                <NavBar 
+                <NavBar
                 gymJoin={this.state.gymJoin}
                     onsearchChanged={this.onsearchChaged}
                     _onLogin={this.props._onLogin}
@@ -65,7 +65,7 @@ class HomeScreen extends Component {
                   return <DiaDiem {...props}  places = {places} />
                 }} />    
                 <Route exact path="/diadiem/:diadiemId" render={props => {                    
-                  return <GymScreen {...props} onsearchChaged={this.onsearchChaged} sendSearchText={this.sendSearchText}/>
+                  return <GymScreen {...props} onsearchChaged={this.onsearchChaged} sendSearchText={this.sendSearchText}  gymJoin={this.state.gymJoin}/>
                 }} /> 
                 <Route exact path="/gym/:gymId" render={props => {                    
                   return <ThongTinPhong {...props} />

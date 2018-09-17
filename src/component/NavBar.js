@@ -43,7 +43,26 @@ class NavBar extends Component {
     handleTextChange = event  =>  this.props.onsearchChanged(event.target.value);
 
     render() {        
+        var PT = (this.props.user && this.props.gymJoin) ? this.props.gymJoin.PT.filter(PT =>       //*take this
+            PT._id === this.props.user.chosenPT.PT
+        ) : " ";
+
+        const userPT = this.props.user ? (
+            (this.props.user.chosenPT.active === true && PT) ? (
+                <p>
+                    PT: {PT[0].name}
+                    PTID: {PT[0]._id}
+                </p>
+            ) : "chua co PT"
+        ) : "chua co User ";
+
+        const gymUser = this.props.gymJoin ? 
+            <p>
+                Gym: {this.props.gymJoin.name}
+            </p> : "chua co Gym";
         
+
+
         const display = (this.props.user !== null && this.props.user !== undefined) ? (          //for navbar
             <div>
                 <span className="navbar-text">Welcome, {this.props.user.name}</span>
@@ -70,7 +89,7 @@ class NavBar extends Component {
 
         
         return (
-            <div className="container-fluid">
+            <div className="container-fluid mt-0 ">
                 <Navbar color="dark" dark expand="md" >
                     <NavbarBrand href="https://gymmover.herokuapp.com"><img src={logo} alt="" /></NavbarBrand>
                     <Input  onChange={this.handleTextChange} type="text"placeholder="  Let's press address here" />
@@ -86,6 +105,8 @@ class NavBar extends Component {
                                 {display}
 
                             </UncontrolledDropdown>
+                            {userPT}
+                            {gymUser}
                         </Nav>
                     </Collapse>
                 </Navbar>

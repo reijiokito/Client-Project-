@@ -5,10 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 import HomeScreen from './container/HomeScreen';
-// import video from './videos/TITAN T1-X (Currently TYTAX® T1-X) - ULTIMATE Gym Machine UNLIMITED Workout Possibilities.mp4';
+import video from './videos/TITAN T1-X (Currently TYTAX® T1-X) - ULTIMATE Gym Machine UNLIMITED Workout Possibilities.mp4';
 import { BrowserRouter } from 'react-router-dom';
 import backgroundPT from './imgs/backgroundPT.jpg';
 import domain from './domain';
+import Footer from './container/Footer';
+
 class App extends Component {
   state = {
     user: null,
@@ -23,7 +25,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get(domain.domain+"/api/auth/isLogin")
+      .get(domain.domain + "/api/auth/isLogin")
       .then(data => {
         if (data.success === 0)
           this.setState({ isLogin: false });
@@ -35,7 +37,7 @@ class App extends Component {
 
   _onLogin = (username, password) => {
     axios
-      .post(domain.domain+"/api/auth/login", {
+      .post(domain.domain + "/api/auth/login", {
         username: username,
         password: password
       })
@@ -44,7 +46,7 @@ class App extends Component {
         this.setState({
           user: response.data.user
 
-        });        
+        });
       })
       .catch(err => {
         console.log(err);
@@ -53,7 +55,7 @@ class App extends Component {
 
   _onSignUp = (username, password, email, sdt, name) => {
     axios
-      .post(domain.domain+"/api/user", {
+      .post(domain.domain + "/api/user", {
         username: username,
         password: password,
         email: email,
@@ -71,7 +73,7 @@ class App extends Component {
 
   _onLogout = () => {
     axios
-      .get(domain.domain+"/api/auth/logout")
+      .get(domain.domain + "/api/auth/logout")
       .then(response => {
         this.setState({
           user: null,
@@ -82,38 +84,43 @@ class App extends Component {
   }
 
   _onRegister = (gym, PT) => {
-    
-      axios
-        .put(domain.domain+"/api/user/" + this.state.user._id, {
-          gymJoin: gym,
-          chosenPT: PT
-        })
-        .then(response => {
-          console.log(response.data);
-        })
-        .catch(err => console.log(err));
+
+    axios
+      .put(domain.domain + "/api/user/" + this.state.user._id, {
+        gymJoin: gym,
+        chosenPT: PT
+      })
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-          {/* <video autoPlay muted loop id="myVideo">
-            <source src={video} type="video/mp4" />
-            Your browser does not support HTML5 video.
-        </video> */}
-          {/* <img  src={backgroundPT} alt=""  id="#myImg"/> */}
-          <HomeScreen
-            gymJoin={this.state.gymJoin}
-            _onRegister={this._onRegister}
-            _onLogin={this._onLogin}
-            _onSignUp={this._onSignUp}
-            _onLogout={this._onLogout}
-            user={this.state.user}
-            isLogin={this.state.isLogin} />
+        <div>
 
+          <div className="App">
+            <video autoPlay muted loop id="myVideo">
+              <source src={video} type="video/mp4" />
+              Your browser does not support HTML5 video.
+              </video>
+            {/* <img  src={backgroundPT} alt=""  id="#myImg"/> */}
+            <HomeScreen
+              gymJoin={this.state.gymJoin}
+              _onRegister={this._onRegister}
+              _onLogin={this._onLogin}
+              _onSignUp={this._onSignUp}
+              _onLogout={this._onLogout}
+              user={this.state.user}
+              isLogin={this.state.isLogin} />
 
-      </div>
+            <Footer />
+
+          </div>
+
+        </div>
       </BrowserRouter>
     );
   }
