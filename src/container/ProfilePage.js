@@ -25,7 +25,7 @@ class ProfilePage extends Component {
         const user = this.state.user;
         return (
             <div>
-                <div className="col-4 text-light">
+                <div className="col-4 text-dark">
                     <img sr={background} alt="profileImg" />
 
                 </div>
