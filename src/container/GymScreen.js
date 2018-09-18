@@ -15,14 +15,14 @@ class GymScreen extends Component {
 
     componentDidMount() {
         axios
-            .get(domain.domain+"/api/gym")
+            .get(domain.domain + "/api/gym")
             .then(data => {
                 this.setState({ infos: data.data.places })
             })
             .catch(err => console.log(err));
 
         axios
-            .get(domain.domain+`/api/diadiem/${this.props.match.params.diadiemId}`)
+            .get(domain.domain + `/api/diadiem/${this.props.match.params.diadiemId}`)
             .then(data => {
                 this.setState({ placeName: data.data.place[0].name });
             })
@@ -60,11 +60,11 @@ class GymScreen extends Component {
                     <div className="col-4">
 
                     </div>
-                    <div className="col-4">
+                    <div className="col-4 hovereffect2">
                         <img className="rounded m-3 w-75 position-relative " style={{ maxWidth: "100%", maxHeight: "75%" }} src={info.imgUrl} alt="Imgs" />
                         <Link to={`/gym/${info._id}`}>
                             <Button className="text-center mb-1 p-0 w-75" color="primary">
-                                Xem Phòng
+                                More Infomation
                             </Button>
                         </Link>
                     </div>
@@ -78,6 +78,7 @@ class GymScreen extends Component {
 
         return (
             <div className="container mt-3">
+                <h3 style={{ fontFamily: "cursive" }}>Popular addresses in {this.state.placeName}</h3>
                 <div className="row">
                     {allInfo}
                 </div>

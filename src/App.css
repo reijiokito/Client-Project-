@@ -1,6 +1,7 @@
 .App {
   background-color: #ffffff;
   text-align: center;
+  font-family: cursive;
 }
 
 
@@ -23,3 +24,358 @@
   min-height: 100%;
   z-index: -1;
 } */
+.hovereffect {
+  width:100%;
+  height:100%;
+  float:left;
+  overflow:hidden;
+  position:relative;
+  text-align:center;
+  cursor:default;
+  }
+  
+  .hovereffect .overlay {
+  width:100%;
+  height:100%;
+  position:absolute;
+  overflow:hidden;
+  top:0;
+  left:0;
+  opacity:0;
+  background-color:rgba(0,0,0,0.5);
+  -webkit-transition:all .4s ease-in-out;
+  transition:all .4s ease-in-out
+  }
+  
+  .hovereffect img {
+  display:block;
+  position:relative;
+  -webkit-transition:all .4s linear;
+  transition:all .4s linear;
+  }
+  
+  .hovereffect h2 {
+  text-transform:uppercase;
+  color:#fff;
+  text-align:center;
+  position:relative;
+  font-size:17px;
+  background:rgba(0,0,0,0.6);
+  -webkit-transform:translatey(-100px);
+  -ms-transform:translatey(-100px);
+  transform:translatey(-100px);
+  -webkit-transition:all .2s ease-in-out;
+  transition:all .2s ease-in-out;
+  padding:10px;
+  }
+  
+  .hovereffect a.info {
+  text-decoration:none;
+  display:inline-block;
+  text-transform:uppercase;
+  color:#fff;
+  border:1px solid #fff;
+  background-color:transparent;
+  opacity:0;
+  filter:alpha(opacity=0);
+  -webkit-transition:all .2s ease-in-out;
+  transition:all .2s ease-in-out;
+  margin:50px 0 0;
+  padding:7px 14px;
+  }
+  
+  .hovereffect a.info:hover {
+  box-shadow:0 0 5px #fff;
+  }
+  
+  .hovereffect:hover img {
+  -ms-transform:scale(1.2);
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+  }
+  
+  .hovereffect:hover .overlay {
+  opacity:1;
+  filter:alpha(opacity=100);
+  }
+  
+  .hovereffect:hover h2,.hovereffect:hover a.info {
+  opacity:1;
+  filter:alpha(opacity=100);
+  -ms-transform:translatey(0);
+  -webkit-transform:translatey(0);
+  transform:translatey(0);
+  }
+  
+  .hovereffect:hover a.info {
+  -webkit-transition-delay:.2s;
+  transition-delay:.2s;
+  }
+
+  .hovereffect2 {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  }
+  
+  .hovereffect2 .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    background-color: rgba(0,0,0,0.5);
+    -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+    transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+  }
+  
+  .hovereffect2 img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+    transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+  }
+  
+  .hovereffect2 h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    background: rgba(0,0,0,0.6);
+    -webkit-transform: translatey(-100px);
+    -ms-transform: translatey(-100px);
+    transform: translatey(-100px);
+    -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+    transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+    padding: 10px;
+  }
+  
+  .hovereffect2 a.info {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    margin: 50px 0 0;
+    padding: 7px 14px;
+  }
+  
+  .hovereffect2 a.info:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+  
+  .hovereffect2:hover img {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  
+  .hovereffect2:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  
+  .hovereffect2:hover h2,.hovereffect:hover a.info {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-transform: translatey(0);
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+  }
+  
+  .hovereffect2:hover a.info {
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s;
+  }
+
+
+
+
+  .hovereffect3 {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  }
+  
+  .hovereffect3 .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  .hovereffect3 img {
+    display: block;
+    position: relative;
+  }
+  
+  .hovereffect3 h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+  }
+  
+  .hovereffect3:hover h2 {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+    transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+  }
+  
+  .hovereffect3 a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 50px 0 0 0;
+    background-color: transparent;
+  }
+  
+  .hovereffect3 a.info:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+  
+  .hovereffect3 hr {
+    width: 40%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    border: 1px solid #FFF;
+  }
+  
+  .hovereffect3  hr:nth-child(3) {
+    -webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,90deg) scale3d(0,0,1);
+    transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,90deg) scale3d(0,0,1);
+  }
+  
+  .hovereffect3  hr:nth-child(4) {
+    -webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,180deg) scale3d(0,0,1);
+    transform: translate3d(-50%,-50%,0) rotate3d(0,0,1, 180deg) scale3d(0,0,1);
+  }
+  
+  .hovereffect3 h2, .hovereffect hr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    background-color: transparent;
+    margin: 0px;
+  }
+  
+  .set1, .set2 {
+    left: 50%;
+    position: absolute;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .set1 {
+    top: 40%;
+  }
+  
+  .set2 {
+    top: 60%;
+  }
+  
+  .hovereffect3 p {
+    width: 30%;
+    text-transform: none;
+    font-size: 15px;
+    line-height: 2;
+  }
+  
+  .hovereffect3 p a {
+    color: #fff;
+  }
+  
+  .hovereffect3 p a:hover,
+  .hovereffect3 p a:focus {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+  }
+  
+  .hovereffect3  a i {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .set1 a:first-child i {
+    -webkit-transform: translate3d(-60px,-60px,0);
+    transform: translate3d(-60px,-60px,0);
+  }
+  
+  .set1 a:nth-child(2) i {
+    -webkit-transform: translate3d(60px,-60px,0);
+    transform: translate3d(60px,-60px,0);
+  }
+  
+  .set2 a:first-child i {
+    -webkit-transform: translate3d(-60px,60px,0);
+    transform: translate3d(-60px,60px,0);
+  }
+  
+  .set2 a:nth-child(2) i {
+    -webkit-transform: translate3d(60px,60px,0);
+    transform: translate3d(60px,60px,0);
+  }
+  
+  .hovereffect3:hover hr:nth-child(3) {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-90deg) scale3d(1,1,1);
+    transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-90deg) scale3d(1,1,1);
+  }
+  
+  .hovereffect3:hover hr:nth-child(4) {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-180deg) scale3d(1,1,1);
+    transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-180deg) scale3d(1,1,1);
+  }
+  
+  .hovereffect3:hover .set1 i:empty, .hovereffect:hover .set2 i:empty {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }

@@ -25,7 +25,7 @@ class GymRoomInfo extends Component {
                 <div >
                     <Link to={`/gym/${this.props.info._id}`}>
                         <Button className="text-center mb-1 p-0 w-75" color="primary">
-                            Xem Phòng
+                            More Infomation
                             </Button>
                     </Link>
                 </div>

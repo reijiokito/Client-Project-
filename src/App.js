@@ -10,6 +10,7 @@ import { BrowserRouter } from 'react-router-dom';
 import backgroundPT from './imgs/backgroundPT.jpg';
 import domain from './domain';
 import Footer from './container/Footer';
+import Caroseul from './container/Caroseul';
 
 class App extends Component {
   state = {
@@ -23,7 +24,7 @@ class App extends Component {
     }));
   }
   // componentWillReceiveProps(nextProps,nextState) {
-    
+
   //   if (nextState.user !== this.state.user) {
   //     this.loadData(nextState.user);
   //   }
@@ -119,21 +120,34 @@ class App extends Component {
       <BrowserRouter>
         <div>
 
-          <div className="App">
+          <div className="App container">
             {/* <video autoPlay muted loop id="myVideo">
               <source src={video} type="video/mp4" />
               Your browser does not support HTML5 video.
-              </video> */}            
-            <HomeScreen
-              gymJoin={this.state.gymJoin}
-              _onRegister={this._onRegister}
-              _onLogin={this._onLogin}
-              _onSignUp={this._onSignUp}
-              _onLogout={this._onLogout}
-              user={this.state.user}
-              isLogin={this.state.isLogin} />
-
-            <Footer />
+              </video> */}
+            
+            <div className="row">
+              <div className="col-12">
+                <HomeScreen
+                  gymJoin={this.state.gymJoin}
+                  _onRegister={this._onRegister}
+                  _onLogin={this._onLogin}
+                  _onSignUp={this._onSignUp}
+                  _onLogout={this._onLogout}
+                  user={this.state.user}
+                  isLogin={this.state.isLogin} />
+              </div>
+              <hr className="m-3" />
+              <div className="col-12">
+                <div style={{ width: "100%", height: "400px !important" }}>
+                  <Caroseul />
+                </div>
+              </div>
+              <hr className="m-3" />
+              <div className="col-12">
+                <Footer />
+              </div>
+            </div>
 
           </div>
 

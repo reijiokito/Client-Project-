@@ -69,6 +69,7 @@ class HomeScreen extends Component {
                     _onLogout={this.props._onLogout}
                     user={this.props.user}
                     isLogin={this.props.isLogin} />
+                
                 <Switch>
                     <Route exact path="/" render={props => {
                         return <DiaDiem {...props} places={places} />

@@ -65,9 +65,9 @@ class BookGymRoom extends Component {
 
         return (
             <div className="float-left ml-1 text-left">
-                <h2>Ban co muon dang ky PT khong?</h2>
+                <h2>Do you want to tran with our PT?</h2>
                 <div key="0" className="col-12 float-left">
-                    <h4>Khong su dung PT</h4>
+                    <h4>I can train by my self</h4>
                     <p>
                         <button className="btn btn-info" onClick={this.onRegister}>
                             Choose

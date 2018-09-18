@@ -21,21 +21,22 @@ class ThongTinPhong extends Component {
         if (this.state.gym) {
             return (
                 <div style={{ lineHeight: "300%", textAlign: "left" }} className="ml-5">
-                <h1 className = "mt-5">Tên phòng: {this.state.gym.name}</h1>
+                <h1 className = "mt-5">Name: {this.state.gym.name}</h1>
                     <div className="row">
-                        <div className="col-6" >
-                            <img src={this.state.gym.imgUrl} className="img-thumbnail rounded float-left mt-5 mb-4" alt="image" />
+                        <div className="col-6 hovereffect" >
+                            <img style={{height:"350px"}}src={this.state.gym.imgUrl} className="img-thumbnail rounded float-left mt-5 mb-4" alt="image" />
+                            
                         </div>
                         <div className="col-6 mt-3">
-                            <div>Mô tả :   {this.state.gym.description}</div>
-                            <div> Địa Điểm: {this.state.gym.address ? this.state.gym.address.ten : ""} </div>
-                            <div>Giá thuê: {this.state.gym.price}</div>
-                            <a>PT của phòng :</a>
+                            <div>Description:   {this.state.gym.description}</div>
+                            <div> Address: {this.state.gym.address ? this.state.gym.address.ten : ""} </div>
+                            <div>Price: {this.state.gym.price}</div>
+                            <a>PTs Room :</a>
                             {allPT}
-                            <div>Liên Hệ: {this.state.gym.Lienhe} để được tư vấn và hỗ trợ.</div>
+                            <div>Phone: {this.state.gym.Lienhe} to get help.</div>
                             <Link to={`/bookroom/${this.state.gym._id}`}>
                                 <div>
-                                    <button className="btn btn-primary btn-lg">Thuê Ngay</button>
+                                    <button className="btn btn-primary btn-lg">Join Now</button>
                                 </div>
                             </Link>
                         </div>
