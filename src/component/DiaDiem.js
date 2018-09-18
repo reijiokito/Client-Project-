@@ -8,6 +8,7 @@ class DiaDiem extends Component {
 
     }
 
+    
     render() {
         const allPlaces = this.props.places.map(place => (
             <div className="col-4 mt-3 mb-3 hovereffect" key={place._id} >                
@@ -21,6 +22,10 @@ class DiaDiem extends Component {
                 </Link>               
             </div>
         ));
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
         
         return (
             <div className="container mt-3">

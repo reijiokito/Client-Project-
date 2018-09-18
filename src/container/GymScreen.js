@@ -6,14 +6,21 @@ import GoogleModal from './GoogleModal';
 import axios from '../axios';
 import domain from '../domain';
 
+import ModalImg from './ModalImg';
 class GymScreen extends Component {
 
     state = {
         infos: [],
         placeName: ""
     }
+    
 
     componentDidMount() {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
         axios
             .get(domain.domain + "/api/gym")
             .then(data => {
@@ -28,6 +35,8 @@ class GymScreen extends Component {
             })
             .catch(err => console.log(err));
 
+            
+
     }
 
     render() {
@@ -40,7 +49,7 @@ class GymScreen extends Component {
         const displayInfo = infos.filter(info => info.diadiem.name.includes(this.state.placeName));
         const allInfo = displayInfo.map((info, key) => (
             <div className="col-12" key={key}>
-                <div className=" row border border-dark m-3 rounded img-thumbnail">
+                <div className=" row border border-dark m-3 rounded img-thumbnail bg-transparent">
                     <div className="col-4 mt-3">
                         <h3>{info.name}</h3>
                         <div>
@@ -60,8 +69,8 @@ class GymScreen extends Component {
                     <div className="col-4">
 
                     </div>
-                    <div className="col-4 hovereffect2">
-                        <img className="rounded m-3 w-75 position-relative " style={{ maxWidth: "100%", maxHeight: "75%" }} src={info.imgUrl} alt="Imgs" />
+                    <div className="col-4 hovereffect2">                        
+                        <ModalImg imgUrl={info.imgUrl}/>
                         <Link to={`/gym/${info._id}`}>
                             <Button className="text-center mb-1 p-0 w-75" color="primary">
                                 More Infomation

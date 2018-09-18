@@ -20,26 +20,26 @@ class Footer extends Component {
                         <h3 className="text-uppercase m-5">Producers / Programers</h3>
                         <div className="row" style={{ color: "#c41971" }}>
                             <div className="col-4 hovereffect3">
-                                <div class="hovereffect">
+                                <div className="hovereffect">
                                     <img src={cong} alt="Nguyen The Cong" className="img-thumbnail rounded-circle" style={{ height: "330px" }} />
-                                    <div class="overlay">
+                                    <div className="overlay">
                                         <h2>The Cong</h2>
-                                        <p class="set1">
+                                        <p className="set1">
                                             <a href="#">
-                                                <i class="fa fa-twitter"></i>
+                                                <i className="fa fa-twitter"></i>
                                             </a>
                                             <a href="#">
-                                                <i class="fa fa-facebook"></i>
+                                                <i className="fa fa-facebook"></i>
                                             </a>
                                         </p>
                                         <hr />
                                         <hr />
-                                        <p class="set2">
+                                        <p className="set2">
                                             <a href="#">
-                                                <i class="fa fa-instagram"></i>
+                                                <i className="fa fa-instagram"></i>
                                             </a>
                                             <a href="#">
-                                                <i class="fa fa-dribbble"></i>
+                                                <i className="fa fa-dribbble"></i>
                                             </a>
                                         </p>
                                     </div>
@@ -50,26 +50,26 @@ class Footer extends Component {
                                 <h5 style={{ fontFamily: "cursive" }}><a target="_blank" className="text-dark mb-0" href="https://www.facebook.com/romeothecong">Nguyen The Cong</a></h5>
                             </div>
                             <div className="col-4 hovereffect3">
-                                <div class="hovereffect">
+                                <div className="hovereffect">
                                     <img src={dang} alt="Nguyen The Cong" className="img-thumbnail rounded-circle" style={{ height: "330px" }} />
-                                    <div class="overlay">
-                                        <h2>The Cong</h2>
-                                        <p class="set1">
+                                    <div className="overlay">
+                                        <h2>Do Dang</h2>
+                                        <p className="set1">
                                             <a href="#">
-                                                <i class="fa fa-twitter"></i>
+                                                <i className="fa fa-twitter"></i>
                                             </a>
                                             <a href="#">
-                                                <i class="fa fa-facebook"></i>
+                                                <i className="fa fa-facebook"></i>
                                             </a>
                                         </p>
                                         <hr />
                                         <hr />
-                                        <p class="set2">
+                                        <p className="set2">
                                             <a href="#">
-                                                <i class="fa fa-instagram"></i>
+                                                <i className="fa fa-instagram"></i>
                                             </a>
                                             <a href="#">
-                                                <i class="fa fa-dribbble"></i>
+                                                <i className="fa fa-dribbble"></i>
                                             </a>
                                         </p>
                                     </div>
@@ -79,26 +79,26 @@ class Footer extends Component {
                                 <h5 style={{ fontFamily: "cursive" }}><a target="_blank" className="text-dark mb-0" href="https://www.facebook.com/profile.php?id=100004256869086">Huynh Dang</a></h5>
                             </div>
                             <div className="col-4 hovereffect3">
-                                <div class="hovereffect">
+                                <div className="hovereffect">
                                     <img src={tho} alt="Nguyen The Cong" className="img-thumbnail rounded-circle" style={{ height: "330px" }} />
-                                    <div class="overlay">
-                                        <h2>The Cong</h2>
-                                        <p class="set1">
+                                    <div className="overlay">
+                                        <h2>Pham Tho</h2>
+                                        <p className="set1">
                                             <a href="#">
-                                                <i class="fa fa-twitter"></i>
+                                                <i className="fa fa-twitter"></i>
                                             </a>
                                             <a href="#">
-                                                <i class="fa fa-facebook"></i>
+                                                <i className="fa fa-facebook"></i>
                                             </a>
                                         </p>
                                         <hr />
                                         <hr />
-                                        <p class="set2">
+                                        <p className="set2">
                                             <a href="#">
-                                                <i class="fa fa-instagram"></i>
+                                                <i className="fa fa-instagram"></i>
                                             </a>
                                             <a href="#">
-                                                <i class="fa fa-dribbble"></i>
+                                                <i className="fa fa-dribbble"></i>
                                             </a>
                                         </p>
                                     </div>

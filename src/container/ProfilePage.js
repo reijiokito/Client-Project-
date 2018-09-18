@@ -5,23 +5,28 @@ import background from '../imgs/background.jpg';
 import domain from '../domain';
 class ProfilePage extends Component {
 
-    state={
-        user : {}
+    state = {
+        user: {}
     }
-    componentDidMount(){
-        
-            axios
-                .get(domain.domain + `/api/user/${this.props.match.params.userId}`)
-                .then(data => {                                 
-                    console.log(data.data.userFound)   ;
-                    this.setState({user : data.data.userFound});
-                })
-                .catch(err => console.log(err));
-        
+    componentDidMount() {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+        axios
+            .get(domain.domain + `/api/user/${this.props.match.params.userId}`)
+            .then(data => {
+                console.log(data.data.userFound);
+                this.setState({ user: data.data.userFound });
+            })
+            .catch(err => console.log(err));
+
+
+
     }
-    
-    render() {                
-        const user = this.state.user;        
+
+    render() {
+        const user = this.state.user;
         return (
             <div>
                 <div className="col-4 text-dark">
@@ -31,7 +36,7 @@ class ProfilePage extends Component {
                 <div className="col-8">
                     <p>Username : {user.name}</p>
                     <p>Email : {user.email}</p>
-                    
+
                 </div>
 
             </div>

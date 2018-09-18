@@ -10,8 +10,8 @@ class BookGymRoom extends Component {
 
     componentDidMount() {
         axios
-            .get(domain.domain+`/api/gym/${this.props.match.params.gymId}`)
-            .then(data => {                
+            .get(domain.domain + `/api/gym/${this.props.match.params.gymId}`)
+            .then(data => {
                 this.setState({
                     PTs: data.data.place[0].PT,
                     gym: data.data.place[0]
@@ -19,9 +19,13 @@ class BookGymRoom extends Component {
 
             })
             .catch(err => console.log(err));
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
 
-    onRegister = (event) => {                  
+    onRegister = (event) => {
         if (!this.props.user)
             alert("Please Login!");
         else {
@@ -29,32 +33,32 @@ class BookGymRoom extends Component {
                 active: true,
                 gymID: this.state.gym._id
             }
-            if(event.target.name){
+            if (event.target.name) {
                 let PT = {
-                    active : true,
-                    PT : event.target.name
+                    active: true,
+                    PT: event.target.name
                 }
-                this.props._onRegister(gym,PT);
+                this.props._onRegister(gym, PT);
             }
-            else{
+            else {
                 let PT = {
-                    active : false,
-                    PT : event.target.name
+                    active: false,
+                    PT: event.target.name
                 }
-                this.props._onRegister(gym,PT);
+                this.props._onRegister(gym, PT);
             }
 
-            
+
 
         }
     }
 
 
-    render() {        
+    render() {
         const allPT = this.state.PTs ? this.state.PTs.map(PT =>
             <div key={PT._id} className="col-12 float-left">
                 <h4>{PT.name}</h4>
-                <img className="img-thumbnail w-25 h-25"src={PT.imgUrl}/>
+                <img className="img-thumbnail w-25 h-25" src={PT.imgUrl} />
                 <p>
                     <button className="btn btn-info" onClick={this.onRegister} name={PT._id}>
                         Choose

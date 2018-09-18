@@ -103,7 +103,6 @@ class App extends Component {
   }
 
   _onRegister = (gym, PT) => {
-
     axios
       .put(domain.domain + "/api/user/" + this.state.user._id, {
         gymJoin: gym,
@@ -121,10 +120,10 @@ class App extends Component {
         <div>
 
           <div className="App container">
-            {/* <video autoPlay muted loop id="myVideo">
+            <video autoPlay muted loop id="myVideo">
               <source src={video} type="video/mp4" />
               Your browser does not support HTML5 video.
-              </video> */}
+              </video>
             
             <div className="row">
               <div className="col-12">

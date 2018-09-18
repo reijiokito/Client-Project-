@@ -24,6 +24,8 @@ class HomeScreen extends Component {
 
     }
 
+    
+
     changeOpenProfile = () => {
         if (this.state.openProfile)
             this.setState({ openProfile: false })
@@ -34,12 +36,17 @@ class HomeScreen extends Component {
 
 
     componentDidMount() {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
         axios
             .get(domain.domain + "/api/diadiem")
             .then(data => {
                 this.setState({ places: data.data.places })
             })
             .catch(err => console.log(err));
+            
     }
 
     onChangeIsOpenInfo = () => {

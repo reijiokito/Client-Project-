@@ -15,6 +15,11 @@ class ThongTinPhong extends Component {
                 this.setState({ gym: data.data.place[0] })
             })
             .catch(err => console.log(err));
+
+            window.scroll({
+                top: 0,
+                behavior: 'smooth'
+            });
     }
     render() {
         const allPT = this.state.gym ? (this.state.gym.PT ? this.state.gym.PT.map((PT,key) => <div key={key}><span>{PT.name}</span>:<span>{`     ${PT.profile}`}</span></div>) : "") : "";

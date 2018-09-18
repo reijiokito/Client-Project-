@@ -20,8 +20,7 @@ class GymRoomInfo extends Component {
                     <h2>{this.props.info ? this.props.info.name : ""}</h2>
                     Price: <p>{this.props.info.price}</p>
                 </div>
-                <div className="gym-price">
-                </div>
+               
                 <div >
                     <Link to={`/gym/${this.props.info._id}`}>
                         <Button className="text-center mb-1 p-0 w-75" color="primary">
