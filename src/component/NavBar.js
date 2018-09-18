@@ -104,7 +104,7 @@ class NavBar extends Component {
 
         return (
             <div className="container-fluid mt-0 " >
-                <Navbar dark expand="md" className="bg-transparent">
+                <Navbar dark expand="md" className="bg-light" >
                     <NavbarBrand href="https://gymmover.herokuapp.com"><img src={logo} alt="" classname="img-thumbnail" /></NavbarBrand>
                     <Input onChange={this.handleTextChange} type="text" placeholder="  Let's press address here" style={{ width: "50%" }} /><span><i class="fas fa-search" style={{marginLeft:"-30px"}}></i></span>
                     <NavbarToggler onClick={this.toggle} />

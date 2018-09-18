@@ -11,6 +11,7 @@ import backgroundPT from './imgs/backgroundPT.jpg';
 import domain from './domain';
 import Footer from './container/Footer';
 
+import fontaswesome from '@fortawesome/fontawesome-free';
 
 class App extends Component {
   state = {

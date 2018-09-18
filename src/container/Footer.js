@@ -85,7 +85,7 @@ class Footer extends Component {
                                         <h2>Pham Tho</h2>
                                         <p className="set1">
                                             <a href="#">
-                                                <i className="fa fa-twitter"></i>
+                                                <i className="fab fa-twitter"></i>
                                             </a>
                                             <a href="#">
                                                 <i class="fab fa-facebook-f"></i>

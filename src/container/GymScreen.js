@@ -49,7 +49,7 @@ class GymScreen extends Component {
         const displayInfo = infos.filter(info => info.diadiem.name.includes(this.state.placeName));
         const allInfo = displayInfo.map((info, key) => (
             <div className="col-12" key={key}>
-                <div className=" row border border-dark m-3 rounded img-thumbnail bg-transparent">
+                <div className=" row border m-3 rounded img-thumbnail  bg-light">
                     <div className="col-4 mt-3">
                         <h3>{info.name}</h3>
                         <div>
@@ -69,7 +69,7 @@ class GymScreen extends Component {
                     <div className="col-4">
 
                     </div>
-                    <div className="col-4 hovereffect2">                        
+                    <div className="col-4">                        
                         <ModalImg imgUrl={info.imgUrl}/>
                         <Link to={`/gym/${info._id}`}>
                             <Button className="text-center mb-1 p-0 w-75" color="primary">
