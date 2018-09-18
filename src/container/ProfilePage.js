@@ -20,9 +20,8 @@ class ProfilePage extends Component {
         
     }
     
-    render() {        
-        console.log(domain.domain + `/api/user/${this.props.match.params.userId}`);
-        const user = this.state.user;
+    render() {                
+        const user = this.state.user;        
         return (
             <div>
                 <div className="col-4 text-dark">

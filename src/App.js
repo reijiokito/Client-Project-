@@ -123,8 +123,7 @@ class App extends Component {
             {/* <video autoPlay muted loop id="myVideo">
               <source src={video} type="video/mp4" />
               Your browser does not support HTML5 video.
-              </video> */}
-            {/* <img  src={backgroundPT} alt=""  id="#myImg"/> */}
+              </video> */}            
             <HomeScreen
               gymJoin={this.state.gymJoin}
               _onRegister={this._onRegister}
