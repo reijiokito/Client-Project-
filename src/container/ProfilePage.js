@@ -12,8 +12,7 @@ class ProfilePage extends Component {
         
             axios
                 .get(domain.domain + `/api/user/${this.props.match.params.userId}`)
-                .then(data => {             
-                    console.log("Hello")    ;
+                .then(data => {                                 
                     console.log(data.data.userFound)   ;
                     this.setState({user : data.data.userFound});
                 })
@@ -22,6 +21,7 @@ class ProfilePage extends Component {
     }
     
     render() {        
+        console.log(domain.domain + `/api/user/${this.props.match.params.userId}`);
         const user = this.state.user;
         return (
             <div>

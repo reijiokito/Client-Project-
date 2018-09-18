@@ -14,8 +14,7 @@ import {
     NavbarToggler,
     NavbarBrand,
     Nav,
-    // NavItem,
-    // NavLink,
+    NavItem,
     Input,
     UncontrolledDropdown,
     DropdownToggle,
@@ -93,6 +92,7 @@ class NavBar extends Component {
                             <div><SignUp
                                 _onSignUp={this.props._onSignUp} /></div>
                         </DropdownItem>
+
                     </DropdownMenu>
                 </div>
             );
@@ -100,27 +100,23 @@ class NavBar extends Component {
 
 
         return (
-            <div className="container-fluid mt-0 ">
-                <Navbar color="dark" dark expand="md" >
+            <div className="container-fluid mt-0 " >
+                <Navbar color="dark" dark expand="md">
                     <NavbarBrand href="https://gymmover.herokuapp.com"><img src={logo} alt="" /></NavbarBrand>
-                    <Input onChange={this.handleTextChange} type="text" placeholder="  Let's press address here" />
+                    <Input onChange={this.handleTextChange} type="text" placeholder="  Let's press address here" style={{ width: "50%" }} />
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
-
-                            <Link to={`/profile/${this.props.user ? this.props.user._id : ""}`}>
-
-                                <button className="btn btn-primary btn-lg">About You</button>
-
-                            </Link>
-
+                            <NavItem>
+                                <Link to={`/profile/${this.props.user ? this.props.user._id : ""}`}>
+                                    About You
+                                </Link>
+                            </NavItem>
                             <UncontrolledDropdown nav inNavbar>
 
                                 {display}
 
                             </UncontrolledDropdown>
-                            {/* {userPT}
-                            {gymUser} */}
 
 
                         </Nav>

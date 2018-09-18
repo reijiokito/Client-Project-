@@ -40,7 +40,7 @@ class GymScreen extends Component {
         const displayInfo = infos.filter(info => info.diadiem.name.includes(this.state.placeName));
         const allInfo = displayInfo.map((info, key) => (
             <div className="col-12" key={key}>
-                <div className=" row border border-dark m-3 rounded">
+                <div className=" row border border-dark m-3 rounded img-thumbnail">
                     <div className="col-4 mt-3">
                         <h3>{info.name}</h3>
                         <div>

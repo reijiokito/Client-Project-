@@ -120,10 +120,10 @@ class App extends Component {
         <div>
 
           <div className="App">
-            <video autoPlay muted loop id="myVideo">
+            {/* <video autoPlay muted loop id="myVideo">
               <source src={video} type="video/mp4" />
               Your browser does not support HTML5 video.
-              </video>
+              </video> */}
             {/* <img  src={backgroundPT} alt=""  id="#myImg"/> */}
             <HomeScreen
               gymJoin={this.state.gymJoin}
