@@ -5,12 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 import HomeScreen from './container/HomeScreen';
-import video from './videos/TITAN T1-X (Currently TYTAX® T1-X) - ULTIMATE Gym Machine UNLIMITED Workout Possibilities.mp4';
+
 import { BrowserRouter } from 'react-router-dom';
 import backgroundPT from './imgs/backgroundPT.jpg';
 import domain from './domain';
 import Footer from './container/Footer';
-import Caroseul from './container/Caroseul';
+
 
 class App extends Component {
   state = {
@@ -119,14 +119,11 @@ class App extends Component {
       <BrowserRouter>
         <div>
 
-          <div className="App container">
-            <video autoPlay muted loop id="myVideo">
-              <source src={video} type="video/mp4" />
-              Your browser does not support HTML5 video.
-              </video>
-            
+          <div className="App container middle">
+
             <div className="row">
               <div className="col-12">
+              
                 <HomeScreen
                   gymJoin={this.state.gymJoin}
                   _onRegister={this._onRegister}
@@ -136,13 +133,8 @@ class App extends Component {
                   user={this.state.user}
                   isLogin={this.state.isLogin} />
               </div>
-              <hr className="m-3" />
-              <div className="col-12">
-                <div style={{ width: "100%", height: "400px !important" }}>
-                  <Caroseul />
-                </div>
-              </div>
-              <hr className="m-3" />
+              <hr className="m-5" />
+              
               <div className="col-12">
                 <Footer />
               </div>

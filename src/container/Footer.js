@@ -26,20 +26,20 @@ class Footer extends Component {
                                         <h2>The Cong</h2>
                                         <p className="set1">
                                             <a href="#">
-                                                <i className="fa fa-twitter"></i>
+                                                <i className="fab fa-twitter"></i>
                                             </a>
                                             <a href="#">
-                                                <i className="fa fa-facebook"></i>
+                                            <i class="fab fa-facebook-f"></i>
                                             </a>
                                         </p>
                                         <hr />
                                         <hr />
                                         <p className="set2">
                                             <a href="#">
-                                                <i className="fa fa-instagram"></i>
+                                            <i class="fab fa-instagram"></i>
                                             </a>
                                             <a href="#">
-                                                <i className="fa fa-dribbble"></i>
+                                                <i className="fab fa-dribbble"></i>
                                             </a>
                                         </p>
                                     </div>
@@ -47,7 +47,7 @@ class Footer extends Component {
 
 
                                 <h4 style={{ fontFamily: "cursive" }}>Project Manager and Developer </h4>
-                                <h5 style={{ fontFamily: "cursive" }}><a target="_blank" className="text-dark mb-0" href="https://www.facebook.com/romeothecong">Nguyen The Cong</a></h5>
+                                <h5 style={{ fontFamily: "cursive" }}><a target="_blank" className="text-dark mb-0" href="https://www.facebook.com/romeothecong"><i class="fab fa-facebook"></i>Nguyen The Cong</a></h5>
                             </div>
                             <div className="col-4 hovereffect3">
                                 <div className="hovereffect">
@@ -56,27 +56,27 @@ class Footer extends Component {
                                         <h2>Do Dang</h2>
                                         <p className="set1">
                                             <a href="#">
-                                                <i className="fa fa-twitter"></i>
+                                                <i className="fab fa-twitter"></i>
                                             </a>
                                             <a href="#">
-                                                <i className="fa fa-facebook"></i>
+                                            <i class="fab fa-facebook-f"></i>
                                             </a>
                                         </p>
                                         <hr />
                                         <hr />
                                         <p className="set2">
                                             <a href="#">
-                                                <i className="fa fa-instagram"></i>
+                                                <i class="fab fa-instagram"></i>
                                             </a>
                                             <a href="#">
-                                                <i className="fa fa-dribbble"></i>
+                                                <i className="fab fa-dribbble"></i>
                                             </a>
                                         </p>
                                     </div>
                                 </div>
 
                                 <h4 style={{ fontFamily: "cursive" }}>Data Manager and Developer</h4>
-                                <h5 style={{ fontFamily: "cursive" }}><a target="_blank" className="text-dark mb-0" href="https://www.facebook.com/profile.php?id=100004256869086">Huynh Dang</a></h5>
+                                <h5 style={{ fontFamily: "cursive" }}><a target="_blank" className="text-dark mb-0" href="https://www.facebook.com/profile.php?id=100004256869086"><i class="fab fa-facebook"></i>Huynh Dang</a></h5>
                             </div>
                             <div className="col-4 hovereffect3">
                                 <div className="hovereffect">
@@ -88,24 +88,24 @@ class Footer extends Component {
                                                 <i className="fa fa-twitter"></i>
                                             </a>
                                             <a href="#">
-                                                <i className="fa fa-facebook"></i>
+                                                <i class="fab fa-facebook-f"></i>
                                             </a>
                                         </p>
                                         <hr />
                                         <hr />
                                         <p className="set2">
                                             <a href="#">
-                                                <i className="fa fa-instagram"></i>
+                                            <i class="fab fa-instagram"></i>
                                             </a>
                                             <a href="#">
-                                                <i className="fa fa-dribbble"></i>
+                                                <i className="fab fa-dribbble"></i>
                                             </a>
                                         </p>
                                     </div>
                                 </div>
 
                                 <h4 style={{ fontFamily: "cursive" }}>Architecture and Data Developer</h4>
-                                <h5 style={{ fontFamily: "cursive" }}><a target="_blank" className="text-dark mb-0" href="https://www.facebook.com/pham.tho.94">Pham Tho</a></h5>
+                                <h5 style={{ fontFamily: "cursive" }}><a target="_blank" className="text-dark mb-0" href="https://www.facebook.com/pham.tho.94"><i class="fab fa-facebook"></i>Pham Tho</a></h5>
                             </div>
                         </div>
 

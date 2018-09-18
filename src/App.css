@@ -1,7 +1,7 @@
 .App {
   color: black;
   text-align: center;
-  font-family: cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -17,13 +17,6 @@
 } */
 
 #myVideo {
- position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  z-index: -1;
-  opacity : 0.4;
 } 
 .hovereffect {
   width:100%;

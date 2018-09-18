@@ -74,7 +74,7 @@ const items = [
             onExited={this.onExited}
             key={item.src}
           >
-            <img src={item.src} alt={item.altText} />
+            <img src={item.src} alt={item.altText} className="img-thumbnail"/>
             
           </CarouselItem>
         );
