@@ -17,7 +17,7 @@ class ThongTinPhong extends Component {
             .catch(err => console.log(err));
     }
     render() {
-        const allPT = this.state.gym ? (this.state.gym.PT ? this.state.gym.PT.map(PT => <div><span>{PT.name}</span>:<span>{`     ${PT.profile}`}</span></div>) : "") : "";
+        const allPT = this.state.gym ? (this.state.gym.PT ? this.state.gym.PT.map((PT,key) => <div key={key}><span>{PT.name}</span>:<span>{`     ${PT.profile}`}</span></div>) : "") : "";
         if (this.state.gym) {
             return (
                 <div style={{ lineHeight: "300%", textAlign: "left" }} className="ml-5">
