@@ -15,7 +15,7 @@ class ProfilePage extends Component {
         });
         axios
             .get(domain.domain + `/api/user/${this.props.match.params.userId}`)
-            .then(data => {
+            .then(data => {                
                 this.setState({ user: data.data.userFound });
             })
             .catch(err => console.log(err));
@@ -42,8 +42,8 @@ class ProfilePage extends Component {
                 <div className="col-6 text-left">
                     <p>Email : <Input style={{maxWidth:"75%"}} type="text" id="name" readOnly value={user.email}></Input><i className="fas fa-edit m-1" onClick={this.changeValue1}></i></p>
                     <p>Phone : <Input style={{maxWidth:"75%"}} type="text" id="phone" readOnly value={user.sdt}></Input><i className="fas fa-edit m-1" onClick={this.changeValue2}></i></p>
-                    <p>PT : <Input style={{maxWidth:"75%"}} type="text" readOnly value={this.props.userPT ? this.props.userPT : "No Info"}></Input></p>
-                    <p>Gym : <Input style={{maxWidth:"75%"}} type="text" readOnly value={this.props.gymUser === "Transform GYM" && this.props.userPT ? this.props.gymUser : "No Info"}></Input></p>
+                    <p>PT : <Input style={{maxWidth:"75%"}} type="text" readOnly value={this.props.userPT }></Input></p>
+                    <p>Gym : <Input style={{maxWidth:"75%"}} type="text" readOnly value={this.props.gymUser}></Input></p>
                     <div className="text-right">
                         <Button className="btn-success">Update</Button>
                     </div>

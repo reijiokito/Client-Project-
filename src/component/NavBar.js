@@ -67,7 +67,7 @@ class NavBar extends Component {
                 </div>
             </div>
         ) : (
-                <div>
+                <UncontrolledDropdown nav inNavbar className="mr-2 mt-3">
                     <DropdownToggle nav caret>
                         <p style={{ color: "black" }}><i className="far fa-user"></i> Accounts</p>
                     </DropdownToggle>
@@ -83,7 +83,7 @@ class NavBar extends Component {
 
                     </DropdownMenu>
 
-                </div>
+                </UncontrolledDropdown>
             );
 
 
@@ -108,12 +108,8 @@ class NavBar extends Component {
                                     <i className="fas fa-phone mr-3"></i>
                                     <span>24/7</span>
                                 </div>
-                            </NavItem>
-                            <UncontrolledDropdown nav inNavbar className="mr-2 mt-3">
-
+                            </NavItem>                        
                                 {display}
-
-                            </UncontrolledDropdown>
                         </Nav>
                     </Collapse>
                 </Navbar>

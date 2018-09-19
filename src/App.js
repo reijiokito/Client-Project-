@@ -111,7 +111,7 @@ class App extends Component {
         gymJoin: gym,
         chosenPT: PT
       })
-      .then(response => {
+      .then(response => {        
         console.log(response.data);
       })
       .catch(err => console.log(err));
