@@ -57,7 +57,7 @@ class HomeScreen extends Component {
 
     sendSearchText = () => this.state.searchText;
 
-    render() {
+    render() {        
         const places = this.state.places.filter((place) => {
             var stringName = place.name.toUpperCase();
             if (stringName.includes(this.state.searchText.toUpperCase()))
@@ -66,12 +66,20 @@ class HomeScreen extends Component {
                 return "";
         });
 
+        var PT = (this.props.user && this.props.gymJoin) ? this.props.gymJoin.PT.filter(PT =>       //*take this
+            PT._id === this.props.user.chosenPT.PT
+        ) : " ";                
+        const userPT = this.props.user ? (
+            (this.props.user.chosenPT.active === "true" && PT) ? PT[0].name  : "") : "";
+
+        const gymUser = this.props.gymJoin ?  this.props.gymJoin.name : "";
+         
 
         return (
             <div>
                 <NavBar
                     changeOpenProfile={this.changeOpenProfile}
-                    gymJoin={this.state.gymJoin}
+                    gymJoin={this.props.gymJoin}
                     onsearchChanged={this.onsearchChaged}
                     _onLogin={this.props._onLogin}
                     _onSignUp={this.props._onSignUp}
@@ -94,7 +102,7 @@ class HomeScreen extends Component {
                         return <BookGymRoom {...props} _onRegister={this.props._onRegister} isLogin={this.props.isLogin} user={this.props.user} />
                     }} />
                     <Route exact path="/profile/:userId" render={props => {
-                        return <ProfilePage {...props} />
+                        return <ProfilePage {...props} userPT={userPT} gymUser={gymUser}/>
                     }} />
                 </Switch>
 

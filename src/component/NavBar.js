@@ -49,46 +49,22 @@ class NavBar extends Component {
     handleTextChange = event => this.props.onsearchChanged(event.target.value);
 
     render() {
-        // var PT = (this.props.user && this.props.gymJoin) ? this.props.gymJoin.PT.filter(PT =>       //*take this
-        //     PT._id === this.props.user.chosenPT.PT
-        // ) : " ";
-        // const user = this.props.user;
-        // const PTinfo = this.props.PT;
-        // const gyminfo = this.props.gymJoin;
-        // console.log(user);
-        // console.log(PTinfo);
-        // console.log(gyminfo)
-        // const userPT = this.props.user ? (
-        //     (this.props.user.chosenPT.active === true && PT) ? (
-        //         <p>
-        //             PT: {PT[0].name}
-        //             PTID: {PT[0]._id}
-        //         </p>
-        //     ) : "chua co PT"
-        // ) : "chua co User ";
-
-        // const gymUser = this.props.gymJoin ? 
-        //     <p>
-        //         Gym: {this.props.gymJoin.name}
-        //     </p> : "chua co Gym";
 
         const display = (this.props.user !== null && this.props.user !== undefined) ? (          //for navbar
             <div>
                 <div>
-                    <DropdownToggle nav caret>
-                        <span className="navbar-text text-dark">Welcome, {this.props.user.name}</span>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                    <DropdownItem>
+                    <div className="m-2">
                         <Link to={`/profile/${this.props.user ? this.props.user._id : ""}`}>
-                            <div>Your Profile</div>
+                            <img height="60px" width="60px" className="img-thumbnail rounded-circle" src="https://cdn3.iconfinder.com/data/icons/mixed-icon-collection/100/2--512.png" alt="img" />
                         </Link>
-                    </DropdownItem>
-                    </DropdownMenu>
+                    </div>
                 </div>
 
-                <div><Logout
-                    _onLogout={this.props._onLogout} /></div>
+                <div>
+                    <Link to="/">
+                        <Logout _onLogout={this.props._onLogout} />
+                    </Link>
+                </div>
             </div>
         ) : (
                 <div>
@@ -106,6 +82,7 @@ class NavBar extends Component {
                         </DropdownItem>
 
                     </DropdownMenu>
+
                 </div>
             );
 

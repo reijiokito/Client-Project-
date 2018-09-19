@@ -41,8 +41,20 @@ class App extends Component {
           this.setState({ isLogin: false });
         else
           this.setState({ isLogin: true, user: data.data.user });
+        if (this.state.user && this.state.user.gymJoin.active === "true") {
+          axios
+            .get(domain.domain + "/api/gym/" + this.state.user.gymJoin.gymID)
+            .then(response => {            
+              this.setState({
+                gymJoin: response.data.place[0]
+              });
+            })
+            .catch(error => console.log(error));
+        }
       })
       .catch(err => console.log(err));
+
+
   }
 
   _onLogin = (username, password) => {
@@ -52,21 +64,9 @@ class App extends Component {
         password: password
       })
       .then(response => {
-        console.log(response)
         this.setState({
           user: response.data.user
-
         });
-        // if (response.data.user.gymJoin.active === true) {
-        //   axios
-        //     .get(domain.domain+"/api/gym/" + response.data.user.gymJoin.gymID)
-        //     .then(response => {
-        //       this.setState({
-        //         gymJoin: response.data.place[0]
-        //       });
-        //     })
-        //     .catch(error => console.log(error));
-        // }
 
       })
       .catch(err => {
@@ -82,11 +82,10 @@ class App extends Component {
         email: email,
         sdt: sdt,
         name: name,
-        gymJoin:{active:"false",gymID:"5b9cd6243da5e12464a7df76"},
-        chosenPT:{active:"false",PT:"5b9cd7f53da5e12464a7df7a"}
+        gymJoin: { active: "false", gymID: "5b9cd6243da5e12464a7df76" },
+        chosenPT: { active: "false", PT: "5b9cd7f53da5e12464a7df7a" }
       })
       .then(response => {
-        console.log(response);
         this.setState({
           user: response.data.user
         })
@@ -127,7 +126,7 @@ class App extends Component {
 
             <div className="row">
               <div className="col-12">
-              
+
                 <HomeScreen
                   gymJoin={this.state.gymJoin}
                   _onRegister={this._onRegister}
@@ -138,7 +137,7 @@ class App extends Component {
                   isLogin={this.state.isLogin} />
               </div>
               <hr className="m-5" />
-              
+
               <div className="col-12">
                 <Footer />
               </div>
@@ -148,7 +147,7 @@ class App extends Component {
 
         </div>
       </BrowserRouter>
-      
+
     );
   }
 }
