@@ -7,12 +7,13 @@ import './App.css';
 import HomeScreen from './container/HomeScreen';
 
 import { BrowserRouter } from 'react-router-dom';
-import backgroundPT from './imgs/backgroundPT.jpg';
+// import backgroundPT from './imgs/backgroundPT.jpg';
 import domain from './domain';
 import Footer from './container/Footer';
 
-import fontaswesome from '@fortawesome/fontawesome-free';
+// import fontaswesome from '@fortawesome/fontawesome-free';
 
+// import SearchBox from './container/SearchBox';
 class App extends Component {
   state = {
     user: null,
@@ -80,7 +81,9 @@ class App extends Component {
         password: password,
         email: email,
         sdt: sdt,
-        name: name
+        name: name,
+        gymJoin:{active:"false",gymID:"5b9cd6243da5e12464a7df76"},
+        chosenPT:{active:"false",PT:"5b9cd7f53da5e12464a7df7a"}
       })
       .then(response => {
         console.log(response);
@@ -145,6 +148,7 @@ class App extends Component {
 
         </div>
       </BrowserRouter>
+      
     );
   }
 }

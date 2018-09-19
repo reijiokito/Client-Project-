@@ -62,6 +62,8 @@ class HomeScreen extends Component {
             var stringName = place.name.toUpperCase();
             if (stringName.includes(this.state.searchText.toUpperCase()))
                 return place;
+            else
+                return "";
         });
 
 

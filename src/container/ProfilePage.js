@@ -20,9 +20,6 @@ class ProfilePage extends Component {
                 this.setState({ user: data.data.userFound });
             })
             .catch(err => console.log(err));
-
-
-
     }
 
     render() {

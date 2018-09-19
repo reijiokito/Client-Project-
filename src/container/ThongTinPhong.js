@@ -29,7 +29,7 @@ class ThongTinPhong extends Component {
                 <h1 className = "mt-5">Name: {this.state.gym.name}</h1>
                     <div className="row">
                         <div className="col-6 hovereffect" >
-                            <img style={{height:"350px"}}src={this.state.gym.imgUrl} className="img-thumbnail rounded float-left mt-5 mb-4" alt="image" />
+                            <img style={{height:"350px"}}src={this.state.gym.imgUrl} className="img-thumbnail rounded float-left mt-5 mb-4" alt="img" />
                             
                         </div>
                         <div className="col-6 mt-3">

@@ -58,7 +58,7 @@ class BookGymRoom extends Component {
         const allPT = this.state.PTs ? this.state.PTs.map(PT =>
             <div key={PT._id} className="col-12 float-left">
                 <h4>{PT.name}</h4>
-                <img className="img-thumbnail w-25 h-25" src={PT.imgUrl} />
+                <img className="img-thumbnail w-25 h-25" src={PT.imgUrl} alt="img"/>
                 <p>
                     <button className="btn btn-info" onClick={this.onRegister} name={PT._id}>
                         Choose

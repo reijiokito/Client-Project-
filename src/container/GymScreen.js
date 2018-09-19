@@ -44,6 +44,8 @@ class GymScreen extends Component {
             var stringName = info.name.toUpperCase();
             if (stringName.includes(this.props.sendSearchText().toUpperCase()))
                 return info;
+            else
+                return "";
         });
 
         const displayInfo = infos.filter(info => info.diadiem.name.includes(this.state.placeName));

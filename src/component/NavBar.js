@@ -74,14 +74,26 @@ class NavBar extends Component {
 
         const display = (this.props.user !== null && this.props.user !== undefined) ? (          //for navbar
             <div>
-                <span className="navbar-text">Welcome, {this.props.user.name}</span>
+                <div>
+                    <DropdownToggle nav caret>
+                        <span className="navbar-text text-dark">Welcome, {this.props.user.name}</span>
+                    </DropdownToggle>
+                    <DropdownMenu right>
+                    <DropdownItem>
+                        <Link to={`/profile/${this.props.user ? this.props.user._id : ""}`}>
+                            <div>Your Profile</div>
+                        </Link>
+                    </DropdownItem>
+                    </DropdownMenu>
+                </div>
+
                 <div><Logout
                     _onLogout={this.props._onLogout} /></div>
             </div>
         ) : (
                 <div>
                     <DropdownToggle nav caret>
-                        <p style={{ color: "black" }}><i class="far fa-user"></i> Accounts</p>
+                        <p style={{ color: "black" }}><i className="far fa-user"></i> Accounts</p>
                     </DropdownToggle>
                     <DropdownMenu right>
                         <DropdownItem>
@@ -91,9 +103,6 @@ class NavBar extends Component {
                         <DropdownItem>
                             <div><SignUp
                                 _onSignUp={this.props._onSignUp} /></div>
-                        </DropdownItem>
-                        <DropdownItem>
-                            <div>Your Profile</div>
                         </DropdownItem>
 
                     </DropdownMenu>
@@ -105,16 +114,16 @@ class NavBar extends Component {
         return (
             <div className="container-fluid mt-0 " >
                 <Navbar dark expand="md" className="bg-light" >
-                    <NavbarBrand href="https://gymmover.herokuapp.com"><img src={logo} alt="" classname="img-thumbnail" /></NavbarBrand>
-                    <Input onChange={this.handleTextChange} type="text" placeholder="  Let's press address here" style={{ width: "50%" }} /><span><i class="fas fa-search" style={{marginLeft:"-30px"}}></i></span>
+                    <NavbarBrand href="https://gymmover.herokuapp.com"><img src={logo} alt="" /></NavbarBrand>
+                    <Input onChange={this.handleTextChange} type="text" placeholder="  Let's press address here" style={{ width: "50%" }} /><span><i className="fas fa-search" style={{ marginLeft: "-30px" }}></i></span>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
 
-                            
+
                             <NavItem className="mr-3 row mt-4">
 
-                                <div className="col-9" style={{lineHeight:"10px"}}>
+                                <div className="col-9" style={{ lineHeight: "10px" }}>
                                     <p> HN:01636205055</p>
                                     <p> HCM:0123456789</p>
                                 </div>
